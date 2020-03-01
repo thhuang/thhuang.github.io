@@ -9,13 +9,20 @@ class THApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = ThemeData.dark();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'TH Huang',
       theme: theme.copyWith(
         scaffoldBackgroundColor: Colors.black87,
         textTheme: theme.textTheme.copyWith(
-          headline1: GoogleFonts.libreBaskerville(
-            fontSize: 80.0,
+          headline1: GoogleFonts.roboto(
+            fontSize: 120.0,
             color: Colors.white,
+          ),
+          headline4: GoogleFonts.robotoMono(
+            fontSize: 15.0,
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+            // letterSpacing: 0.8,
           ),
         ),
       ),
