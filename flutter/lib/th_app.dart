@@ -14,15 +14,17 @@ class THApp extends StatelessWidget {
       theme: theme.copyWith(
         scaffoldBackgroundColor: Colors.black87,
         textTheme: theme.textTheme.copyWith(
-          headline1: GoogleFonts.roboto(
-            fontSize: 120.0,
+          headline1: GoogleFonts.lato(
+            fontSize: 90.0,
             color: Colors.white,
           ),
-          headline4: GoogleFonts.robotoMono(
+          headline2: GoogleFonts.robotoSlab(
+            fontSize: 60.0,
+            color: Colors.white,
+          ),
+          headline4: GoogleFonts.robotoSlab(
             fontSize: 15.0,
             color: Colors.white,
-            fontWeight: FontWeight.w500,
-            // letterSpacing: 0.8,
           ),
         ),
       ),
