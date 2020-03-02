@@ -17,6 +17,7 @@ class THApp extends StatelessWidget {
           headline1: GoogleFonts.lato(
             fontSize: 90.0,
             color: Colors.white,
+            fontWeight: FontWeight.w800,
           ),
           headline2: GoogleFonts.robotoSlab(
             fontSize: 60.0,

@@ -9,25 +9,20 @@ class LandingScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: FittedBox(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 10.0),
-                width: 600.0,
-                height: 450.0,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    LandingTitle(),
-                    SizedBox(height: 10.0),
-                    LandingSubtitle(),
-                    SizedBox(height: 80),
-                    AvatarAndName(),
-                  ],
-                ),
-              ),
-            ],
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 10.0),
+            width: 600.0,
+            height: 450.0,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                LandingTitle(),
+                SizedBox(height: 10.0),
+                LandingSubtitle(),
+                SizedBox(height: 80),
+                AvatarAndName(),
+              ],
+            ),
           ),
         ),
       ),
@@ -47,9 +42,13 @@ class AvatarAndName extends StatelessWidget {
       children: <Widget>[
         ClipRRect(
           borderRadius: BorderRadius.circular(40.0),
-          child: Image.asset(
-            'assets/images/avatar.jpg',
+          child: SizedBox(
+            height: 80.0,
             width: 80.0,
+            child: Image.asset(
+              'assets/images/avatar.jpg',
+              width: 80.0,
+            ),
           ),
         ),
         SizedBox(width: 10.0),
@@ -74,9 +73,7 @@ class LandingTitle extends StatelessWidget {
       child: Text(
         'CREATION &\nREALIZATION',
         textAlign: TextAlign.left,
-        style: Theme.of(context).textTheme.headline1.copyWith(
-              fontWeight: FontWeight.w800,
-            ),
+        style: Theme.of(context).textTheme.headline1,
       ),
     );
   }
