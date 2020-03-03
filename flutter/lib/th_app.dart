@@ -12,20 +12,26 @@ class THApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'TH Huang',
       theme: theme.copyWith(
+        backgroundColor: Colors.black87,
         scaffoldBackgroundColor: Colors.black87,
         textTheme: theme.textTheme.copyWith(
-          headline1: GoogleFonts.lato(
-            fontSize: 90.0,
+          headline1: TextStyle(
+            fontFamily: 'lato',
             color: Colors.white,
-            fontWeight: FontWeight.w800,
+            fontSize: 120.0,
+            fontWeight: FontWeight.w400,
           ),
-          headline2: GoogleFonts.robotoSlab(
+          headline2: TextStyle(
+            fontFamily: 'pt serif',
+            color: Colors.white,
             fontSize: 60.0,
-            color: Colors.white,
+            fontWeight: FontWeight.w400,
           ),
-          headline4: GoogleFonts.robotoSlab(
-            fontSize: 15.0,
+          headline4: TextStyle(
+            fontFamily: 'pt serif',
             color: Colors.white,
+            fontSize: 15.0,
+            fontWeight: FontWeight.w400,
           ),
         ),
       ),
