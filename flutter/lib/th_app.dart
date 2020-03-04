@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'features/landing/presentation/screens/landing_screen.dart';
 
+import 'features/landing/presentation/screens/landing_screen.dart';
 import 'features/profile/presentation/screens/profile_screen.dart';
 
 class THApp extends StatelessWidget {
@@ -18,20 +17,18 @@ class THApp extends StatelessWidget {
           headline1: TextStyle(
             fontFamily: 'lato',
             color: Colors.white,
-            fontSize: 120.0,
+            fontSize: 90.0,
             fontWeight: FontWeight.w400,
           ),
           headline2: TextStyle(
             fontFamily: 'pt serif',
             color: Colors.white,
             fontSize: 60.0,
-            fontWeight: FontWeight.w400,
           ),
           headline4: TextStyle(
             fontFamily: 'pt serif',
             color: Colors.white,
-            fontSize: 15.0,
-            fontWeight: FontWeight.w400,
+            fontSize: 18.0,
           ),
         ),
       ),
