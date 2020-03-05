@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import '../../../../core/utils/utils.dart';
 
 import '../../../../core/constants.dart';
 import '../../../../core/presentation/responsive_layout.dart';
@@ -235,12 +236,4 @@ class AvatarLarge extends StatelessWidget {
       ],
     );
   }
-}
-
-double clip(
-  double number, {
-  @required double minimum,
-  @required double maximum,
-}) {
-  return min(max(number, minimum), maximum);
 }
