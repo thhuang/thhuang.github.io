@@ -7,8 +7,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # fonts
-  google_fonts: ^0.3.9
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +16,14 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+  fonts:
+    - family: Oxanium
+      fonts:
+        - asset: assets/fonts/Oxanium/Oxanium-Regular.ttf
+        - asset: assets/fonts/Oxanium/Oxanium-Medium.ttf
+          weight: 500
+    - family: LibreBaskerville
+      fonts:
+        - asset: assets/fonts/LibreBaskerville/LibreBaskerville-Regular.ttf
+        - asset: assets/fonts/LibreBaskerville/LibreBaskerville-Italic.ttf
+          style: italic

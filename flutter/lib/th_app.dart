@@ -15,18 +15,20 @@ class THApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black87,
         textTheme: theme.textTheme.copyWith(
           headline1: TextStyle(
-            fontFamily: 'lato',
+            fontFamily: 'Oxanium',
             color: Colors.white,
-            fontSize: 90.0,
-            fontWeight: FontWeight.w400,
+            fontSize: 93.0,
+            fontWeight: FontWeight.w500,
           ),
           headline2: TextStyle(
-            fontFamily: 'pt serif',
+            fontFamily: 'LibreBaskerville',
             color: Colors.white,
             fontSize: 60.0,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w400,
           ),
           headline4: TextStyle(
-            fontFamily: 'pt serif',
+            fontFamily: 'Oxanium',
             color: Colors.white,
             fontSize: 18.0,
           ),

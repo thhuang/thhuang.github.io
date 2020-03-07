@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import '../../../../core/utils/utils.dart';
 
 import '../../../../core/constants.dart';
 import '../../../../core/presentation/responsive_layout.dart';
+import '../../../../core/utils/utils.dart';
 
 class LandingScreen extends StatelessWidget {
   static const String ID = '/';
@@ -55,10 +55,21 @@ class HeadlineMini extends StatelessWidget {
           children: <Widget>[
             FittedBox(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50.0),
+                padding: EdgeInsets.symmetric(horizontal: 100.0),
                 child: Text(
                   'Hello! I\'m @thhuang',
                   style: Theme.of(context).textTheme.headline2,
+                ),
+              ),
+            ),
+            SizedBox(height: 50.0),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(60.0),
+              child: SizedBox(
+                height: 120.0,
+                width: 120.0,
+                child: Image.asset(
+                  AVATAR_PATH,
                 ),
               ),
             ),
@@ -73,7 +84,7 @@ class HeadlineLarge extends StatelessWidget {
   HeadlineLarge({Key key}) : super(key: key);
 
   final titleMaxWidth = 800.0;
-  final titleMinWidth = 569.0;
+  final titleMinWidth = 576.0;
 
   @override
   Widget build(BuildContext context) {
@@ -131,7 +142,7 @@ class TitleLarge extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(left: 4.5),
+                    padding: EdgeInsets.only(left: 1.0),
                     child: Text(
                       'CREATION &',
                       textAlign: TextAlign.left,
@@ -179,7 +190,7 @@ class SubtitleLarge extends StatelessWidget {
           width: titleWidth,
           child: FittedBox(
             child: Padding(
-              padding: EdgeInsets.only(left: 11.5, right: 13.5),
+              padding: EdgeInsets.only(left: 13.3, right: 16.0),
               child: Text(
                 'is my lifestyle, as a software developer',
                 textAlign: TextAlign.left,
@@ -215,10 +226,10 @@ class AvatarLarge extends StatelessWidget {
         ),
         SizedBox(width: 30.0),
         ClipRRect(
-          borderRadius: BorderRadius.circular(45.0),
+          borderRadius: BorderRadius.circular(40.0),
           child: SizedBox(
-            height: 90.0,
-            width: 90.0,
+            height: 80.0,
+            width: 80.0,
             child: Image.asset(
               AVATAR_PATH,
             ),
