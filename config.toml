@@ -1,6 +1,6 @@
 # Page settings
 
-baseURL = "http://example.org/"
+baseURL = "https://thhuang.github.io/"
 languageCode = "en"
 title = "TH Huang"
 theme = "hugo-devresume-theme"
@@ -14,7 +14,7 @@ theme = "hugo-devresume-theme"
         enable = true
         name = "TH Huang"
         tagline = "Backend Software Engineer"
-        avatar = "avatar.png"
+        avatar = "avatar.jpg"
 
     [params.contact]
         enable = true
