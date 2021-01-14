@@ -22,15 +22,22 @@ class _SlideRandomParticleBackgroundState
     extends State<SlideRandomParticleBackground> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
+    final factor = (0.001 * 0.001) *
+        MediaQuery.of(context).size.width *
+        MediaQuery.of(context).size.height;
+    print(factor);
     return AnimatedBackground(
       behaviour: RandomParticleBehaviour(
         options: ParticleOptions(
           baseColor: widget.color,
           spawnMinRadius: 1.0,
-          spawnMaxRadius: 10.0,
-          spawnMinSpeed: 10.0,
-          spawnMaxSpeed: 50.0,
-          particleCount: 200,
+          spawnMaxRadius: 2.5,
+          spawnMinSpeed: 1.0,
+          spawnMaxSpeed: 20.0,
+          minOpacity: 0.1,
+          maxOpacity: 0.7,
+          opacityChangeRate: 0.5,
+          particleCount: (150 * factor).round(),
         ),
       ),
       vsync: this,

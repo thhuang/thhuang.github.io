@@ -17,7 +17,7 @@ class THApp extends StatelessWidget {
           headline1: TextStyle(
             fontFamily: 'Oxanium',
             color: Colors.white,
-            fontSize: 93.0,
+            fontSize: 30.0,
             fontWeight: FontWeight.w500,
           ),
           headline2: TextStyle(
