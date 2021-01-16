@@ -25,7 +25,6 @@ class _SlideRandomParticleBackgroundState
     final factor = (0.001 * 0.001) *
         MediaQuery.of(context).size.width *
         MediaQuery.of(context).size.height;
-    print(factor);
     return AnimatedBackground(
       behaviour: RandomParticleBehaviour(
         options: ParticleOptions(
