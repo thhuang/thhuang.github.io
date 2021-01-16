@@ -91,7 +91,6 @@ class _FadeAnimationState extends State<FadeAnimation>
       animation: _animation,
       child: widget.child,
       builder: (BuildContext context, Widget _widget) {
-        print(_animation.value);
         return FadeTransition(
           opacity: _animation,
           child: _widget,
