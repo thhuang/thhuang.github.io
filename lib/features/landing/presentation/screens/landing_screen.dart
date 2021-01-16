@@ -7,7 +7,7 @@ import '../../../../core/constants.dart';
 import '../../../../core/presentation/widget_animations.dart';
 
 const double _contentWidth = 500;
-const double _contentHeight = 200;
+const double _contentHeight = 280;
 
 class LandingScreen extends StatelessWidget {
   static const String ID = '/';
@@ -49,6 +49,13 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final titleTextStyle =
+        Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0);
+    final subtitleTextStyle =
+        Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0);
+    final buttonTextStyle =
+        Theme.of(context).textTheme.headline2.copyWith(fontSize: 16.0);
+
     return FadeAnimation(
       sleepMilliseconds: 1000,
       milliseconds: 2000,
@@ -58,15 +65,13 @@ class Content extends StatelessWidget {
           Text(
             'Tzu-Hsuan (TH) Huang',
             textAlign: TextAlign.center,
-            style:
-                Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0),
+            style: titleTextStyle,
           ),
           SizedBox(height: 30),
           Text(
             'Exploring the unknown unknowns',
             textAlign: TextAlign.center,
-            style:
-                Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0),
+            style: subtitleTextStyle,
           ),
           SizedBox(height: 40),
           Row(
@@ -83,8 +88,54 @@ class Content extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 35),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              RoundedButton(
+                onPressed: () => print('pressed'),
+                child: Text('blogs', style: buttonTextStyle),
+              ),
+              SizedBox(width: 10.0),
+              RoundedButton(
+                onPressed: () => print('pressed'),
+                child: Text('projects', style: buttonTextStyle),
+              ),
+              SizedBox(width: 10.0),
+              RoundedButton(
+                onPressed: () => print('pressed'),
+                child: Text('timeline', style: buttonTextStyle),
+              ),
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class RoundedButton extends StatelessWidget {
+  final Widget child;
+  final Color color;
+  final void Function() onPressed;
+
+  const RoundedButton({
+    Key key,
+    this.child,
+    @required this.onPressed,
+    this.color = Colors.white,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return FlatButton(
+      child: child,
+      onPressed: onPressed,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5.0),
+        side: BorderSide(color: color, width: 1.2),
+      ),
+      hoverColor: Colors.white12,
     );
   }
 }
