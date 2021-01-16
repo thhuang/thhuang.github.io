@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:animated_background/animated_background.dart';
@@ -41,6 +42,61 @@ class _SlideRandomParticleBackgroundState
       ),
       vsync: this,
       child: widget.child,
+    );
+  }
+}
+
+class FadeAnimation extends StatefulWidget {
+  final Widget child;
+  final int milliseconds;
+  final int sleepMilliseconds;
+
+  const FadeAnimation({
+    Key key,
+    this.child,
+    this.sleepMilliseconds = 1000,
+    this.milliseconds = 1000,
+  }) : super(key: key);
+
+  @override
+  _FadeAnimationState createState() => _FadeAnimationState();
+}
+
+class _FadeAnimationState extends State<FadeAnimation>
+    with SingleTickerProviderStateMixin {
+  AnimationController _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animation = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: widget.milliseconds),
+    );
+    Future.delayed(
+      Duration(milliseconds: widget.sleepMilliseconds),
+      () => _animation.forward(),
+    );
+  }
+
+  @override
+  void dispose() {
+    _animation.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _animation,
+      child: widget.child,
+      builder: (BuildContext context, Widget _widget) {
+        print(_animation.value);
+        return FadeTransition(
+          opacity: _animation,
+          child: _widget,
+        );
+      },
     );
   }
 }

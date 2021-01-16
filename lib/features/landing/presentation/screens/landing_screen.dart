@@ -19,8 +19,9 @@ class LandingScreen extends StatelessWidget {
     final double widgetPadding =
         max(0.0, 0.5 * (screenHeight - _contentHeight));
 
-    return Scaffold(
-      body: SlideRandomParticleBackground(
+    return Container(
+      color: Theme.of(context).backgroundColor,
+      child: SlideRandomParticleBackground(
         color: Colors.white,
         child: Center(
           child: FittedBox(
@@ -48,36 +49,42 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'Tzu-Hsuan (TH) Huang',
-          textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0),
-        ),
-        SizedBox(height: 30),
-        Text(
-          'Exploring the unknown unknowns',
-          textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0),
-        ),
-        SizedBox(height: 40),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
-              onTap: () => launchURL(GITHUB_URL),
-              child: Image.asset(GITHUB_PATH, height: 50, width: 50),
-            ),
-            SizedBox(width: 10),
-            GestureDetector(
-              onTap: () => launchURL(LINKEDIN_URL),
-              child: Image.asset(LINKEDIN_PATH, height: 50, width: 50),
-            ),
-          ],
-        ),
-      ],
+    return FadeAnimation(
+      sleepMilliseconds: 1000,
+      milliseconds: 2000,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Tzu-Hsuan (TH) Huang',
+            textAlign: TextAlign.center,
+            style:
+                Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0),
+          ),
+          SizedBox(height: 30),
+          Text(
+            'Exploring the unknown unknowns',
+            textAlign: TextAlign.center,
+            style:
+                Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0),
+          ),
+          SizedBox(height: 40),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                onTap: () => launchURL(GITHUB_URL),
+                child: Image.asset(GITHUB_PATH, height: 50, width: 50),
+              ),
+              SizedBox(width: 10),
+              GestureDetector(
+                onTap: () => launchURL(LINKEDIN_URL),
+                child: Image.asset(LINKEDIN_PATH, height: 50, width: 50),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
