@@ -1,10 +1,13 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:thhuang/core/utils/utils.dart';
 
 import '../../../../core/constants.dart';
-import '../../../../core/presentation/responsive_layout.dart';
-import '../../../../core/utils/utils.dart';
+import '../../../../core/presentation/widget_animations.dart';
+
+const double _contentWidth = 500;
+const double _contentHeight = 200;
 
 class LandingScreen extends StatelessWidget {
   static const String ID = '/';
@@ -12,237 +15,67 @@ class LandingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double widgetPadding =
+        max(0.0, 0.5 * (screenHeight - _contentHeight));
+
     return Scaffold(
-      body: Body(),
-    );
-  }
-}
-
-class Body extends StatelessWidget {
-  const Body({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverList(
-          delegate: SliverChildListDelegate([
-            ResponsiveLayout(
-              largeChild: HeadlineLarge(),
-              miniChild: HeadlineMini(),
+      body: SlideRandomParticleBackground(
+        color: Colors.white,
+        child: Center(
+          child: FittedBox(
+            child: SizedBox(
+              height: MediaQuery.of(context).size.height,
+              width: _contentWidth,
+              child: ListView(children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: widgetPadding),
+                  child: SizedBox(height: _contentHeight, child: Content()),
+                )
+              ]),
             ),
-          ]),
-        ),
-      ],
-    );
-  }
-}
-
-class HeadlineMini extends StatelessWidget {
-  const HeadlineMini({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FittedBox(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 100.0),
-                child: Text(
-                  'Hello! I\'m @thhuang',
-                  style: Theme.of(context).textTheme.headline2,
-                ),
-              ),
-            ),
-            SizedBox(height: 50.0),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(60.0),
-              child: SizedBox(
-                height: 120.0,
-                width: 120.0,
-                child: Image.asset(
-                  AVATAR_PATH,
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
   }
 }
 
-class HeadlineLarge extends StatelessWidget {
-  HeadlineLarge({Key key}) : super(key: key);
-
-  final titleMaxWidth = 800.0;
-  final titleMinWidth = 576.0;
+class Content extends StatelessWidget {
+  const Content({
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
-    final titleWidth = clip(
-      width / 2,
-      minimum: titleMinWidth,
-      maximum: titleMaxWidth,
-    );
-    final subtitleWordSpacing = 1.0 + 10.0 * titleWidth / titleMaxWidth;
     return Column(
-      children: <Widget>[
-        SizedBox(height: 0.15 * height),
-        SizedBox(
-          height: max(0.35 * height, 300),
-          child: Column(
-            children: <Widget>[
-              TitleLarge(
-                titleWidth: titleWidth,
-              ),
-              SizedBox(height: 10.0),
-              SubtitleLarge(
-                titleWidth: titleWidth,
-                subtitleWordSpacing: subtitleWordSpacing,
-              ),
-            ],
-          ),
-        ),
-        SizedBox(height: 0.1 * height),
-        AvatarLarge(),
-      ],
-    );
-  }
-}
-
-class TitleLarge extends StatelessWidget {
-  const TitleLarge({
-    Key key,
-    @required this.titleWidth,
-  }) : super(key: key);
-
-  final double titleWidth;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        SizedBox(
-          width: titleWidth,
-          child: Column(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(left: 1.0),
-                    child: Text(
-                      'CREATION &',
-                      textAlign: TextAlign.left,
-                      style: Theme.of(context).textTheme.headline1,
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  FittedBox(
-                    child: Text(
-                      'REALIZATION',
-                      textAlign: TextAlign.left,
-                      style: Theme.of(context).textTheme.headline1,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+      children: [
+        Text(
+          'Tzu-Hsuan (TH) Huang',
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0),
         ),
-      ],
-    );
-  }
-}
-
-class SubtitleLarge extends StatelessWidget {
-  const SubtitleLarge({
-    Key key,
-    @required this.titleWidth,
-    @required this.subtitleWordSpacing,
-  }) : super(key: key);
-
-  final double titleWidth;
-  final double subtitleWordSpacing;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        SizedBox(
-          width: titleWidth,
-          child: FittedBox(
-            child: Padding(
-              padding: EdgeInsets.only(left: 13.3, right: 16.0),
-              child: Text(
-                'is my lifestyle, as a software developer',
-                textAlign: TextAlign.left,
-                style: Theme.of(context).textTheme.headline2.copyWith(
-                      wordSpacing: subtitleWordSpacing,
-                    ),
-              ),
+        SizedBox(height: 30),
+        Text(
+          'Exploring the unknown unknowns',
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0),
+        ),
+        SizedBox(height: 40),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => launchURL(GITHUB_URL),
+              child: Image.asset(GITHUB_PATH, height: 50, width: 50),
             ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class AvatarLarge extends StatelessWidget {
-  const AvatarLarge({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        SizedBox(
-          width: 200.0,
-          child: Text(
-            'Tzu-Hsuan (TH) Huang',
-            textAlign: TextAlign.right,
-            style: Theme.of(context).textTheme.headline4,
-          ),
-        ),
-        SizedBox(width: 30.0),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(40.0),
-          child: SizedBox(
-            height: 80.0,
-            width: 80.0,
-            child: Image.asset(
-              AVATAR_PATH,
+            SizedBox(width: 10),
+            GestureDetector(
+              onTap: () => launchURL(LINKEDIN_URL),
+              child: Image.asset(LINKEDIN_PATH, height: 50, width: 50),
             ),
-          ),
-        ),
-        SizedBox(width: 30.0),
-        SizedBox(
-          width: 200.0,
-          child: Text(
-            'Flutter | Go | Robotics',
-            textAlign: TextAlign.left,
-            style: Theme.of(context).textTheme.headline4,
-          ),
+          ],
         ),
       ],
     );

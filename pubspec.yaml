@@ -8,6 +8,7 @@ dependencies:
   flutter:
     sdk: flutter
   animated_background: ^1.0.5
+  url_launcher: ^5.7.10
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +29,9 @@ flutter:
         - asset: assets/fonts/LibreBaskerville/LibreBaskerville-Regular.ttf
         - asset: assets/fonts/LibreBaskerville/LibreBaskerville-Italic.ttf
           style: italic
+    - family: AnonymousPro
+      fonts:
+        - asset: assets/fonts/AnonymousPro/AnonymousPro-Regular.ttf
+    - family: Alegreya
+      fonts:
+        - asset: assets/fonts/Alegreya/Alegreya-Regular.ttf

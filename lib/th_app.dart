@@ -17,20 +17,20 @@ class THApp extends StatelessWidget {
           headline1: TextStyle(
             fontFamily: 'Oxanium',
             color: Colors.white,
-            fontSize: 93.0,
             fontWeight: FontWeight.w500,
           ),
           headline2: TextStyle(
-            fontFamily: 'LibreBaskerville',
+            fontFamily: 'AnonymousPro',
             color: Colors.white,
-            fontSize: 60.0,
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.w400,
+          ),
+          headline3: TextStyle(
+            fontFamily: 'Alegreya',
+            color: Colors.white,
           ),
           headline4: TextStyle(
-            fontFamily: 'Oxanium',
+            fontFamily: 'LibreBaskerville',
             color: Colors.white,
-            fontSize: 18.0,
+            fontStyle: FontStyle.italic,
           ),
         ),
       ),
