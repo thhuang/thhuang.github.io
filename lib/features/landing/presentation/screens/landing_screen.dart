@@ -71,12 +71,12 @@ class Content extends StatelessWidget {
             children: [
               ImageButton(
                 onPressed: () => launchURL(GITHUB_URL),
-                child: Image.asset(GITHUB_PATH, height: 50, width: 50),
+                child: Image.network(IMG_GITHUB_URL, height: 50, width: 50),
               ),
               SizedBox(width: 10),
               ImageButton(
                 onPressed: () => launchURL(LINKEDIN_URL),
-                child: Image.asset(LINKEDIN_PATH, height: 50, width: 50),
+                child: Image.network(IMG_LINKEDIN_URL, height: 50, width: 50),
               ),
             ],
           ),
