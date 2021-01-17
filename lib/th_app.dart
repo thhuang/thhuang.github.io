@@ -36,8 +36,6 @@ class THApp extends StatelessWidget {
         textTheme: theme.textTheme.copyWith(
           headline1: TextStyle(fontFamily: 'Oxanium', color: Colors.white, fontWeight: FontWeight.w500),
           headline2: TextStyle(fontFamily: 'AnonymousPro', color: Colors.white),
-          headline3: TextStyle(fontFamily: 'Alegreya', color: Colors.white),
-          headline4: TextStyle(fontFamily: 'LibreBaskerville', color: Colors.white, fontStyle: FontStyle.italic),
           button: TextStyle(fontFamily: 'AnonymousPro', color: Colors.white, fontSize: 16.0),
         ),
       ),
