@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import '../../../../core/constants.dart';
 import '../../../../core/presentation/widget_animations.dart';
 import '../../../../core/utils/utils.dart';
+import '../../../blogs/presentation/screens/blogs_screen.dart';
+import '../../../projects/presentation/screens/projects_screen.dart';
+import '../../../timeline/presentation/screens/timeline_screen.dart';
 import '../widgets/buttons.dart';
 
 const double _contentWidth = 500;
@@ -17,8 +20,7 @@ class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
-    final double widgetPadding =
-        max(0.0, 0.5 * (screenHeight - _contentHeight));
+    final double widgetPadding = max(0.0, 0.5 * (screenHeight - _contentHeight));
 
     return Container(
       color: Theme.of(context).backgroundColor,
@@ -50,12 +52,9 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final titleTextStyle =
-        Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0);
-    final subtitleTextStyle =
-        Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0);
-    final buttonTextStyle =
-        Theme.of(context).textTheme.headline2.copyWith(fontSize: 16.0);
+    final titleTextStyle = Theme.of(context).textTheme.headline1.copyWith(fontSize: 40.0);
+    final subtitleTextStyle = Theme.of(context).textTheme.headline2.copyWith(fontSize: 20.0);
+    final buttonTextStyle = Theme.of(context).textTheme.button;
 
     return FadeAnimation(
       sleepMilliseconds: 1000,
@@ -63,17 +62,9 @@ class Content extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            'Tzu-Hsuan (TH) Huang',
-            textAlign: TextAlign.center,
-            style: titleTextStyle,
-          ),
+          Text('Tzu-Hsuan (TH) Huang', textAlign: TextAlign.center, style: titleTextStyle),
           SizedBox(height: 30),
-          Text(
-            'Exploring the unknown unknowns',
-            textAlign: TextAlign.center,
-            style: subtitleTextStyle,
-          ),
+          Text('Exploring the unknown unknowns', textAlign: TextAlign.center, style: subtitleTextStyle),
           SizedBox(height: 40),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -94,17 +85,17 @@ class Content extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RoundedButton(
-                onPressed: () => print('blogs button pressed'),
+                onPressed: () => Navigator.pushNamed(context, BlogsScreen.ID),
                 child: Text('blogs', style: buttonTextStyle),
               ),
               SizedBox(width: 10.0),
               RoundedButton(
-                onPressed: () => print('projects button pressed'),
+                onPressed: () => Navigator.pushNamed(context, ProjectsScreen.ID),
                 child: Text('projects', style: buttonTextStyle),
               ),
               SizedBox(width: 10.0),
               RoundedButton(
-                onPressed: () => print('timeline button pressed'),
+                onPressed: () => Navigator.pushNamed(context, TimelineScreen.ID),
                 child: Text('timeline', style: buttonTextStyle),
               ),
             ],
