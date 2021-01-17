@@ -8,4 +8,5 @@ git branch -D web &&
     rm -rf build &&
     git add . &&
     git commit -m "publish" &&
-    git push origin web -f
+    git push origin web -f &&
+    git checkout master
