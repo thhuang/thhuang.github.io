@@ -57,8 +57,8 @@ class Content extends StatelessWidget {
     final buttonTextStyle = Theme.of(context).textTheme.button;
 
     return FadeAnimation(
-      sleepMilliseconds: 1000,
-      milliseconds: 2000,
+      sleepMilliseconds: 500,
+      milliseconds: 1500,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
