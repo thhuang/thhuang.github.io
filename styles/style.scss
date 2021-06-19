@@ -1,0 +1,16 @@
+@mixin darkTheme() {
+  background: #202124;
+  color: #fff;
+}
+
+@mixin flexCenter() {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @include darkTheme();
+  @include flexCenter();
+}
