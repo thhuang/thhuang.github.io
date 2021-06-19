@@ -1,4 +1,4 @@
-const AVATAR_PATH = 'assets/images/avatar.jpg';
+const AVATAR_PATH = 'assets/images/avatar.png';
 const IMG_GITHUB_URL = 'https://i.imgur.com/K5x2oHp.png';
 const IMG_LINKEDIN_URL = 'https://i.imgur.com/C38zwrQ.png';
 
