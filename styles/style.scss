@@ -1,16 +1,93 @@
-@mixin darkTheme() {
-  background: #202124;
-  color: #fff;
+@keyframes fadeAndScale {
+  0% {
+    opacity: 0;
+    transform: scale3d(.75, .75, 1);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale3d(.75, .75, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
 }
 
-@mixin flexCenter() {
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@mixin fadeAndScale($duration, $delay) {
+  animation-name: fadeAndScale;
+  animation-duration: $duration;
+  animation-timing-function: cubic-bezier(.39, -1.05, .58, 1.95);
+  animation-delay: $delay;
+  transform-origin: center bottom;
+}
+
+
+@mixin fade($duration, $delay) {
+  animation-name: fade;
+  animation-duration: $duration;
+  animation-timing-function: ease-in;
+  animation-delay: $delay;
+  transform-origin: center;
+}
+
+
+@mixin darkTheme() {
+  background: #202124;
+  // background: moccasin;
+  color: white;
+}
+
+
+@mixin flexCenter($direction) {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: $direction;
 }
+
+
+@mixin textTheme() {
+  font-family: 'Anonymous Pro', monospace;
+}
+
 
 body {
   @include darkTheme();
-  @include flexCenter();
+  @include textTheme();
+
+  .content {
+    @include flexCenter($direction: column);
+    
+    .avatar {
+      filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
+      @include fadeAndScale($duration: 2s, $delay: -1.3s);
+    }
+
+    .name {
+      @include fade($duration: 1.1s, $delay: 0s);
+    }
+
+    .subtitle {
+      @include fade($duration: 1.1s, $delay: 0s); 
+    }
+  }
 }
+
