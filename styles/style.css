@@ -126,16 +126,15 @@ body .content .round-button {
 }
 
 body .content #avatar {
-  height: 180px;
-  width: 180px;
-  -webkit-filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
-          filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
-  margin: 16px;
+  height: 200px;
+  width: 200px;
+  -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+          filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+  margin: 0;
 }
 
 body .content #name {
-  margin: 16px;
-  margin-bottom: 8px;
+  margin: 8px;
 }
 
 body .content #subtitle {

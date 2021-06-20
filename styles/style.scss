@@ -110,15 +110,14 @@ body {
     }
     
     #avatar {
-      height:180px;
-      width:180px;
-      filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
-      margin: $marginMedium;
+      height:200px;
+      width:200px;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+      margin: 0;
     }
 
     #name {
-      margin: $marginMedium;
-      margin-bottom: $marginSmall;
+      margin: $marginSmall;
     }
     
     #subtitle {
