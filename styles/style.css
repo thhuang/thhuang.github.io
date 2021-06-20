@@ -92,9 +92,7 @@ body .content {
           flex-direction: column;
 }
 
-body .content .avatar {
-  -webkit-filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
-          filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
+body .content .animation-0 {
   -webkit-animation-name: fadeAndScale;
           animation-name: fadeAndScale;
   -webkit-animation-duration: 2s;
@@ -105,10 +103,9 @@ body .content .avatar {
           animation-delay: -1.3s;
   -webkit-transform-origin: center bottom;
           transform-origin: center bottom;
-  margin: 16px;
 }
 
-body .content .name {
+body .content .animation-1 {
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1.1s;
@@ -119,20 +116,29 @@ body .content .name {
           animation-delay: 0s;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+body .content .round-button {
+  height: 48px;
+  width: 48px;
+  margin: 5px;
+}
+
+body .content #avatar {
+  -webkit-filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
+          filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
   margin: 16px;
 }
 
-body .content .subtitle {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.1s;
-          animation-duration: 1.1s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+body .content #name {
+  margin: 16px;
+}
+
+body .content #subtitle {
+  margin: 16px;
+}
+
+body .content #external-links {
   margin: 16px;
 }
 /*# sourceMappingURL=style.css.map */

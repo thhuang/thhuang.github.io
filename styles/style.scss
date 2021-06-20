@@ -93,21 +93,38 @@ body {
   .content {
     @include flexCenter($direction: column);
     
-    .avatar {
-      filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
+    .animation-0 {
       @include fadeAndScale($duration: 2s, $delay: -1.3s);
+    }
+
+    .animation-1 {
+      @include fade($duration: 1.1s, $delay: 0s);
+    }
+
+    .round-button {
+      height: 48px;
+      width:  48px;
+      margin: 5px;
+    }
+    
+    #avatar {
+      filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
       margin: $marginMedium;
     }
 
-    .name {
-      @include fade($duration: 1.1s, $delay: 0s);
+    #name {
       margin: $marginMedium;
     }
     
-    .subtitle {
-      @include fade($duration: 1.1s, $delay: 0s); 
+    #subtitle {
       margin: $marginMedium;
     }
+
+    #external-links {
+      margin: $marginMedium;
+    }
+
+
   }
 }
 
