@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
+
 @keyframes fadeAndScale {
   0% {
     opacity: 0;
@@ -15,6 +17,7 @@
   }
 }
 
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -28,6 +31,9 @@
     opacity: 1;
   }
 }
+
+
+$marginMedium: 16px;
 
 
 @mixin fadeAndScale($duration, $delay) {
@@ -60,12 +66,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: $direction;
 }
 
 
 @mixin textTheme() {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Ubuntu Mono', monospace;
+  
+  h1 {
+    font-weight: normal;
+    font-size: 40px;
+  }
+  
+  h4 {
+    font-weight: 300;
+    font-size: 20px;
+  }
 }
 
 
@@ -79,14 +96,17 @@ body {
     .avatar {
       filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
       @include fadeAndScale($duration: 2s, $delay: -1.3s);
+      margin: $marginMedium;
     }
 
     .name {
       @include fade($duration: 1.1s, $delay: 0s);
+      margin: $marginMedium;
     }
-
+    
     .subtitle {
       @include fade($duration: 1.1s, $delay: 0s); 
+      margin: $marginMedium;
     }
   }
 }
