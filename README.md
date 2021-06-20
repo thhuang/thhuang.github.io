@@ -1,3 +1,3 @@
-# [Hello! I'm @thhuang](https://thhuang.github.io)
-
-This is my personal website! Currently under construction...
+| permalink                                     |
+| --------------------------------------------- |
+| [/index.html](https://thhuang.dev/index.html) |
