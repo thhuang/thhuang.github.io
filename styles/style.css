@@ -90,6 +90,7 @@ body .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 400px;
 }
 
 body .content .animation-0 {
@@ -125,6 +126,8 @@ body .content .round-button {
 }
 
 body .content #avatar {
+  height: 180px;
+  width: 180px;
   -webkit-filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
           filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
   margin: 16px;
@@ -132,10 +135,12 @@ body .content #avatar {
 
 body .content #name {
   margin: 16px;
+  margin-bottom: 8px;
 }
 
 body .content #subtitle {
   margin: 16px;
+  margin-top: 8px;
 }
 
 body .content #external-links {

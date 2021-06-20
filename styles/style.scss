@@ -33,6 +33,7 @@
 }
 
 
+$marginSmall: 8px;
 $marginMedium: 16px;
 
 
@@ -92,6 +93,7 @@ body {
 
   .content {
     @include flexCenter($direction: column);
+    min-height: 400px;
     
     .animation-0 {
       @include fadeAndScale($duration: 2s, $delay: -1.3s);
@@ -108,16 +110,20 @@ body {
     }
     
     #avatar {
+      height:180px;
+      width:180px;
       filter: drop-shadow(0 0 11px rgba(255, 255, 255, 0.2));
       margin: $marginMedium;
     }
 
     #name {
       margin: $marginMedium;
+      margin-bottom: $marginSmall;
     }
     
     #subtitle {
       margin: $marginMedium;
+      margin-top: $marginSmall;
     }
 
     #external-links {
