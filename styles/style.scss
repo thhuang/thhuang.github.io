@@ -47,6 +47,7 @@ html {
 
 $marginSmall: .5rem;
 $marginMedium: 1rem;
+$marginLarge: 2rem;
 
 
 @mixin fadeAndScale($duration, $delay) {
@@ -69,7 +70,6 @@ $marginMedium: 1rem;
 
 @mixin darkTheme() {
   background: #202124;
-  // background: moccasin;
   color: white;
 }
 
@@ -103,8 +103,10 @@ body {
   @include textTheme();
 
   .content {
-    @include flexCenter($direction: column);
-    min-height: 30rem;
+    @include flexCenter(column);
+
+    min-height: 28rem;
+    background-color: transparent;
     
     .animation-0 {
       @include fadeAndScale($duration: 2s, $delay: -1.3s);
@@ -121,8 +123,8 @@ body {
     }
     
     #avatar {
-      height:13rem;
-      width:13rem;
+      height: 13rem;
+      width: 13rem;
       filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
       margin: 0;
     }
@@ -137,10 +139,20 @@ body {
     }
 
     #external-links {
-      margin: $marginMedium;
+      margin: $marginLarge;
     }
 
 
   }
+
+  #background-particles {
+    position: absolute;
+    min-height: 30rem;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
+
 

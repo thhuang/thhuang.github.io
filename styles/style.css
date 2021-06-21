@@ -100,7 +100,8 @@ body .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 30rem;
+  min-height: 28rem;
+  background-color: transparent;
 }
 
 body .content .animation-0 {
@@ -153,6 +154,15 @@ body .content #subtitle {
 }
 
 body .content #external-links {
-  margin: 1rem;
+  margin: 2rem;
+}
+
+body #background-particles {
+  position: absolute;
+  min-height: 30rem;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
