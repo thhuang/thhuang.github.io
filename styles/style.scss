@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@0;1&display=swap');
 
+
+html {
+  font-size: 16px;
+}
+
+
+@media (max-width: 540px) {
+  html {
+    font-size: 10px;
+  }
+}
+
 @keyframes fadeAndScale {
   0% {
     opacity: 0;
@@ -33,8 +45,8 @@
 }
 
 
-$marginSmall: 8px;
-$marginMedium: 16px;
+$marginSmall: .5rem;
+$marginMedium: 1rem;
 
 
 @mixin fadeAndScale($duration, $delay) {
@@ -76,13 +88,12 @@ $marginMedium: 16px;
   font-family: 'Ubuntu Mono', monospace;
   
   h1 {
-    font-weight: normal;
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   
   h4 {
-    font-weight: 300;
-    font-size: 20px;
+    font-weight: normal;
+    font-size: 1.2rem;
   }
 }
 
@@ -93,7 +104,7 @@ body {
 
   .content {
     @include flexCenter($direction: column);
-    min-height: 400px;
+    min-height: 30rem;
     
     .animation-0 {
       @include fadeAndScale($duration: 2s, $delay: -1.3s);
@@ -104,14 +115,14 @@ body {
     }
 
     .round-button {
-      height: 48px;
-      width:  48px;
-      margin: 5px;
+      height: 3rem;
+      width:  3rem;
+      margin: 0.5rem;
     }
     
     #avatar {
-      height:200px;
-      width:200px;
+      height:13rem;
+      width:13rem;
       filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
       margin: 0;
     }
