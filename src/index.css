@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    @apply font-sans bg-background text-white leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-medium;
+  }
+
+  h1 {
+    @apply text-4xl leading-relaxed;
+  }
+
+  section {
+    @apply mt-32 lg:mt-24 md:mt-8;
+  }
+
+  section > h2,
+  section > h5 {
+    @apply text-center text-light;
+  }
+
+  section > h2 {
+    @apply text-primary mb-12;
+  }
+
+  a {
+    @apply text-primary transition-ease
+    hover:text-white;
+  }
+
+  img {
+    @apply block w-full object-cover;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container-base {
+  @apply container mx-auto w-9/12 lg:w-10/12 sm:w-11/12;
+}
+
+.transition-ease {
+  @apply transition ease-in-out duration-300;
+}
+
+.btn {
+  @apply w-max inline-block text-primary cursor-pointer py-3 px-5
+  border border-solid border-primary rounded-md
+  hover:bg-white hover:text-background hover:border-transparent;
+}
+
+.btn-primary {
+  @apply bg-primary text-background;
 }
