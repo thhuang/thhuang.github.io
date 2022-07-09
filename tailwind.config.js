@@ -12,7 +12,7 @@ module.exports = {
         primary: '#836EAA',
         'primary-varient': '#4db5ff66',
         white: '#ffffff',
-        light: '#BBB8B8',
+        light: '#ffffff99',
       },
     },
     screens: {
