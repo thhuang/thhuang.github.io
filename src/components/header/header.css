@@ -1,0 +1,31 @@
+header {
+  @apply h-screen pt-24;
+}
+
+.header__container {
+  @apply text-center relative h-full lg:h-4/6 sm:h-screen;
+}
+
+.cta {
+  @apply mt-10 flex gap-5 justify-center;
+}
+
+.header__socials {
+  @apply flex flex-col items-center gap-3 absolute left-0 bottom-12
+  after:content-[''] after:w-px after:h-8 after:bg-primary
+  sm:hidden;
+}
+
+.me {
+  @apply bg-gradient-to-b from-primary bg-clip-padding w-80 h-96
+  absolute left-2/4 translate-x-[-50%] mt-10 rounded-t-full;
+}
+
+.me > img {
+  @apply relative top-[-1.25rem];
+}
+
+.scroll__down {
+  @apply absolute right-[-2.25rem] bottom-20 rotate-90 font-light text-sm
+  sm:hidden;
+}

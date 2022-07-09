@@ -3,7 +3,7 @@ import CV from '../../assets/cv.pdf';
 
 const CTA = () => {
   return (
-    <div className="mt-10 flex gap-5 justify-center">
+    <div className="cta">
       <a href={CV} download className="btn">
         Download CV
       </a>
