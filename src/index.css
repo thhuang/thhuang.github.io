@@ -51,7 +51,7 @@
 }
 
 .container-base {
-  @apply container mx-auto w-9/12 lg:w-10/12 sm:w-11/12;
+  @apply mx-auto w-9/12 lg:w-10/12 sm:w-11/12;
 }
 
 .transition-ease {
