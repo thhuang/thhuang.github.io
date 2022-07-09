@@ -9,10 +9,18 @@ const HeaderSocials = () => {
                  after:content-[''] after:w-px after:h-8 after:bg-primary
                  sm:hidden"
     >
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://linkedin.com/in/tzuhsuanhuang/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <BsLinkedin />
       </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/thhuang/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <BsGithub />
       </a>
     </div>
