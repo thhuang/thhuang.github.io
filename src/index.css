@@ -37,7 +37,7 @@
   }
 
   section > h2 {
-    @apply text-primary mb-12;
+    @apply text-primary mb-12 text-3xl leading-relaxed;
   }
 
   a {

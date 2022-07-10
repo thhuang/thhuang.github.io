@@ -1,0 +1,42 @@
+.about__container {
+  @apply grid grid-cols-[35%_53%] gap-x-[12%];
+}
+
+.about__me {
+  @apply w-full aspect-square rounded-[2rem] bg-gradient-to-br from-primary grid place-items-center;
+}
+
+.about__image {
+  @apply bg-background opacity-75 rounded-[2rem] overflow-hidden
+  -rotate-[8deg] transition-ease hover:rotate-0;
+}
+
+.about__cards {
+  @apply grid grid-cols-3 gap-12;
+}
+
+.about__card {
+  @apply bg-background-varient border-2 border-solid border-transparent rounded-xl
+  py-8 text-center transition-ease cursor-default hover:bg-transparent hover:border-background-varient;
+}
+
+.about__icon {
+  @apply text-primary text-center text-lg leading-relaxed mb-4
+  relative left-2/4 -translate-x-2/4;
+}
+
+.about__card h5 {
+  @apply text-sm leading-relaxed mb-1;
+}
+
+.about__card small {
+  @apply text-xs text-light;
+}
+
+.about__content ul {
+  @apply mt-6 mx-0 mb-8 text-light list-outside list-none;
+}
+
+.about__content li {
+  @apply mt-4;
+}

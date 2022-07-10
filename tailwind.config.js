@@ -8,11 +8,11 @@ module.exports = {
     extend: {
       colors: {
         background: '#0e011a',
-        'background-varient': '#0e011a66',
+        'background-varient': '#1a042d',
         primary: '#836eaa',
-        'primary-varient': '#4E2A84',
+        'primary-varient': '#b6acd1',
         white: '#ffffff',
-        light: '#ffffff99',
+        light: '#bbb8b8',
       },
     },
     screens: {
