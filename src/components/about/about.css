@@ -1,9 +1,12 @@
 .about__container {
-  @apply grid grid-cols-[35%_53%] gap-x-[12%];
+  @apply grid grid-cols-[35%_55%] gap-x-[10%]
+  lg:grid-cols-1 lg:gap-x-0;
 }
 
 .about__me {
-  @apply w-full aspect-square rounded-[2rem] bg-gradient-to-br from-primary grid place-items-center;
+  @apply w-full aspect-square rounded-[2rem] bg-gradient-to-br from-primary grid place-items-center
+  lg:w-2/4 lg:mt-8 lg:mb-16 lg:mx-auto
+  sm:w-3/5 sm:mt-0 sm:mb-12;
 }
 
 .about__image {
@@ -12,7 +15,8 @@
 }
 
 .about__cards {
-  @apply grid grid-cols-3 gap-12;
+  @apply grid grid-cols-3 gap-12
+  sm:grid-cols-[1fr_1fr] sm:gap-4;
 }
 
 .about__card {
@@ -34,7 +38,7 @@
 }
 
 .about__content ul {
-  @apply mt-6 mx-0 mb-8 text-light list-outside list-none;
+  @apply mt-6  mb-8 mx-0 text-light list-outside list-none;
 }
 
 .about__content li {
