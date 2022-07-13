@@ -1,0 +1,40 @@
+section {
+  @apply h-auto;
+}
+
+.experience__container {
+  @apply grid grid-cols-1 gap-8;
+}
+
+.experience__container > div {
+  @apply bg-background-varient py-10 px-20 rounded-3xl;
+}
+
+.experience__container h4 {
+  @apply italic;
+}
+
+.experience__container ul {
+  @apply mt-3 ml-4 text-light list-outside list-disc;
+}
+
+.experience__container li {
+  @apply mt-3;
+}
+
+.role {
+  @apply grid grid-cols-[60%_40%];
+}
+
+.role > div > p {
+  @apply text-right;
+}
+
+.skills {
+  @apply flex flex-wrap gap-2 my-2;
+}
+
+.skills > small {
+  @apply w-fit inline-block px-2 text-light
+  border border-solid border-primary rounded-md;
+}
