@@ -28,7 +28,7 @@
   }
 
   section {
-    @apply pt-32 lg:pt-24 sm:pt-8 h-screen lg:h-auto;
+    @apply pt-28 lg:pt-24 sm:pt-8 h-screen lg:h-auto;
   }
 
   section > h2,
@@ -37,7 +37,7 @@
   }
 
   section > h2 {
-    @apply text-primary mb-12 text-3xl leading-relaxed;
+    @apply text-primary mb-11 text-3xl leading-relaxed;
   }
 
   a {

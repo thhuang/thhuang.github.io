@@ -1,17 +1,13 @@
-section {
-  @apply h-auto;
-}
-
 .experience__container {
-  @apply grid grid-cols-1 gap-8;
+  @apply grid grid-cols-1 gap-3;
 }
 
-.experience__container > div {
-  @apply bg-background-varient py-10 px-20 rounded-3xl;
+.experience__card {
+  @apply bg-background-varient py-5 px-10 rounded-3xl cursor-default;
 }
 
 .experience__container h4 {
-  @apply italic;
+  @apply text-light;
 }
 
 .experience__container ul {
@@ -22,19 +18,23 @@ section {
   @apply mt-3;
 }
 
-.role {
-  @apply grid grid-cols-[60%_40%];
+.experience__role {
+  @apply grid grid-cols-[50%_50%];
 }
 
-.role > div > p {
+.experience__role > div > p {
   @apply text-right;
 }
 
-.skills {
+.experience__skills {
   @apply flex flex-wrap gap-2 my-2;
 }
 
-.skills > small {
-  @apply w-fit inline-block px-2 text-light
-  border border-solid border-primary rounded-md;
+.experience__skills > small {
+  @apply w-fit inline-block px-2 text-light bg-transparent
+  border border-solid border-primary rounded-md hover:bg-primary hover:text-white;
+}
+
+.experience__details {
+  @apply hidden;
 }
