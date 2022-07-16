@@ -3,7 +3,8 @@
 }
 
 .experience__card {
-  @apply bg-background-varient py-5 px-10 rounded-3xl cursor-default;
+  @apply bg-background-varient rounded-3xl cursor-default
+  py-5 px-10 md:px-6 sm:px-4 sm:text-center;
 }
 
 .experience__container h4 {
@@ -19,15 +20,15 @@
 }
 
 .experience__role {
-  @apply grid grid-cols-[50%_50%];
+  @apply grid grid-cols-[52%_48%] sm:grid-cols-1;
 }
 
 .experience__role > div > p {
-  @apply text-right;
+  @apply text-right sm:text-center sm:font-light;
 }
 
 .experience__skills {
-  @apply flex flex-wrap gap-2 my-2;
+  @apply flex flex-wrap sm:justify-center gap-2 my-2;
 }
 
 .experience__skills > small {
