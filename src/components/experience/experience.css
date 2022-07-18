@@ -3,8 +3,9 @@
 }
 
 .experience__card {
-  @apply bg-background-varient rounded-3xl cursor-default
-  py-5 px-10 md:px-6 sm:px-4 sm:text-center;
+  @apply bg-background-varient rounded-3xl cursor-default border-2 border-solid border-transparent
+  py-3.5 px-10 md:px-6 sm:px-4 sm:text-center
+  hover:bg-transparent hover:border-background-varient;
 }
 
 .experience__container h4 {
