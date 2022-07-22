@@ -51,8 +51,16 @@
 }
 
 @layer components {
+  .container-width-sm {
+    @apply w-11/12;
+  }
+
+  .container-width-lg {
+    @apply w-10/12;
+  }
+
   .container-base {
-    @apply mx-auto w-9/12 lg:w-10/12 sm:w-11/12;
+    @apply mx-auto w-9/12 lg:container-width-lg sm:container-width-sm;
   }
 
   .transition-ease {
@@ -61,8 +69,8 @@
 
   .btn {
     @apply w-max inline-block text-primary cursor-pointer py-3 px-5
-  border border-solid border-primary rounded-md
-  hover:bg-white hover:text-background hover:border-transparent;
+    border border-solid border-primary rounded-md
+    hover:bg-white hover:text-background hover:border-transparent;
   }
 
   .btn-primary {

@@ -1,0 +1,33 @@
+.contact__container {
+  @apply w-7/12 grid grid-cols-[30%_52%] gap-[12%]
+  xl:grid-cols-1 xl:gap-8 sm:container-width-sm;
+}
+
+.contact__options {
+  @apply flex flex-col gap-5
+  xl:grid xl:grid-cols-2 lg:flex;
+}
+
+.contact__option {
+  @apply p-5 rounded-xl text-center border-2 border-solid border-transparent
+  bg-background-varient hover:bg-transparent hover:border-background-varient
+  sm:rounded-3xl;
+}
+
+.contact__icon {
+  @apply relative left-2/4 -translate-x-2/4 mb-4 text-xl;
+}
+
+.contact__option a {
+  @apply mt-3 inline-block text-sm;
+}
+
+form {
+  @apply flex flex-col gap-5;
+}
+
+input,
+textarea {
+  @apply w-full py-2 px-3 rounded-lg bg-transparent text-white
+  border-2 border-solid border-primary resize-none;
+}
