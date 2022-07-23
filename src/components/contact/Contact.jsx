@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import { VscIssues } from 'react-icons/vsc';
 
 const Contact = () => {
+  const formRef = useRef();
+  const [sent, setSent] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_nd2hu5z',
+        'template_nyikoep',
+        formRef.current,
+        'SnIyQ9g_NwytAMt4m'
+      )
+      .then(() => {
+        setSent(true);
+      });
+  };
+
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -42,22 +61,34 @@ const Contact = () => {
           </article>
         </div>
 
-        <form action="">
+        <form ref={formRef} onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
             placeholder="Your Full Name"
             required
+            disabled={sent}
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            disabled={sent}
+          />
           <textarea
             name="message"
             rows="7"
             placeholder="Your Messages"
             required
+            disabled={sent}
           ></textarea>
-          <button type="submit" className="btn btn-primary">
-            Send Message
+          <button
+            type="submit"
+            className={sent ? 'btn' : 'btn btn-primary'}
+            disabled={sent}
+          >
+            {sent ? 'Sent' : 'Send Message'}
           </button>
         </form>
       </div>

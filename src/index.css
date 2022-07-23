@@ -69,8 +69,9 @@
 
   .btn {
     @apply w-max inline-block text-primary cursor-pointer py-3 px-5
-    border border-solid border-primary rounded-md
-    hover:bg-white hover:text-background hover:border-transparent;
+    border border-solid border-primary rounded-md transition-ease
+    enabled:hover:bg-white enabled:hover:text-background enabled:hover:border-transparent
+    disabled:cursor-not-allowed;
   }
 
   .btn-primary {
