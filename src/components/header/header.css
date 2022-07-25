@@ -1,9 +1,9 @@
 header {
-  @apply h-screen pt-24;
+  @apply h-screen pt-24 overflow-hidden;
 }
 
 .header__container {
-  @apply text-center relative h-full lg:h-[42rem];
+  @apply text-center relative h-full;
 }
 
 .cta {
