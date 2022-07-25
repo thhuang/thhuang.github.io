@@ -3,7 +3,7 @@ header {
 }
 
 .header__container {
-  @apply text-center relative h-full lg:h-4/6 sm:h-screen;
+  @apply text-center relative h-full lg:h-[42rem];
 }
 
 .cta {
