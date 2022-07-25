@@ -42,7 +42,7 @@
 }
 
 .about__content ul {
-  @apply mt-6  mb-8 mx-0 text-light list-outside list-none;
+  @apply mt-6  mb-8 mx-0 text-light list-outside list-none text-center;
 }
 
 .about__content li {
