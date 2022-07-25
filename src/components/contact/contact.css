@@ -22,6 +22,10 @@
   @apply mt-3 inline-block text-sm;
 }
 
+.contact__loading {
+  @apply my-[0.7rem];
+}
+
 form {
   @apply flex flex-col gap-5;
 }

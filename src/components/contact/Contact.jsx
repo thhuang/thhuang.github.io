@@ -1,15 +1,19 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import { VscIssues } from 'react-icons/vsc';
+import BarLoader from 'react-spinners/BarLoader';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const formRef = useRef();
+  const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    setSending(true);
 
     emailjs
       .sendForm(
@@ -21,6 +25,19 @@ const Contact = () => {
       .then(() => {
         setSent(true);
       });
+  };
+
+  const getButtonText = () => {
+    if (sent) return 'Sent';
+    if (!sending) return 'Send Message';
+    return (
+      <BarLoader
+        className="contact__loading"
+        width="107"
+        size="10"
+        color="#fff"
+      />
+    );
   };
 
   return (
@@ -85,10 +102,10 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            className={sent ? 'btn' : 'btn btn-primary'}
-            disabled={sent}
+            className={'translate-ease btn' + (sent ? '' : ' btn-primary')}
+            disabled={sending || sent}
           >
-            {sent ? 'Sent' : 'Send Message'}
+            {getButtonText()}
           </button>
         </form>
       </div>
