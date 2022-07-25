@@ -1,13 +1,27 @@
 import React from 'react';
 import './footer.css';
-import Logo from '../../assets/logo.png';
+import { BsGithub } from 'react-icons/bs';
+import { RiLinkedinFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
     <footer id="footer">
-      {/* <a href="#" className="footer__logo"> */}
-      {/*   <img src={Logo} alt="logo" /> */}
-      {/* </a> */}
+      <a href="#header" className="footer__logo">
+        TH Huang
+      </a>
+
+      <div className="footer__socials">
+        <a href="https://linkedin.com/in/tzuhsuanhuang/">
+          <RiLinkedinFill />
+        </a>
+        <a href="https://github.com/thhuang/">
+          <BsGithub />
+        </a>
+      </div>
+
+      <div className="footer__copyright">
+        <small>&copy; {new Date().getFullYear()} TH Huang</small>
+      </div>
     </footer>
   );
 };

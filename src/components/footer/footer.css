@@ -1,3 +1,24 @@
 footer {
-  @apply h-32;
+  @apply bg-primary-varient py-12 px-0 text-center mt-28;
+}
+
+footer a {
+  @apply text-background;
+}
+
+.footer__logo {
+  @apply text-2xl font-medium;
+}
+
+.footer__socials {
+  @apply flex justify-center gap-4 mt-4 mb-4;
+}
+
+.footer__socials a {
+  @apply bg-background text-white p-2 rounded-xl flex
+  border-2 border-solid border-transparent hover:border-background hover:bg-transparent;
+}
+
+.footer__copyright {
+  @apply text-background mb-20;
 }
