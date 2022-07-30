@@ -1,6 +1,3 @@
-const { wait } = require('@testing-library/user-event/dist/utils');
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
