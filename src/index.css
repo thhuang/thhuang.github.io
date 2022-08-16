@@ -28,7 +28,7 @@
   }
 
   section {
-    @apply pt-28 lg:pt-24 sm:pt-8 h-screen lg:h-auto;
+    @apply pt-28 lg:pt-24 sm:pt-8 h-screen min-h-[48rem] lg:h-auto;
   }
 
   section > h2,
