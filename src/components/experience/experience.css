@@ -3,7 +3,8 @@
 }
 
 .experience__card {
-  @apply bg-background-varient rounded-3xl cursor-default border-2 border-solid border-transparent
+  @apply bg-background-varient rounded-3xl cursor-default
+  border-2 border-solid border-transparent transition-ease
   py-3.5 px-10 md:px-6 sm:px-4 sm:text-center
   hover:bg-transparent hover:border-background-varient;
 }
@@ -33,7 +34,7 @@
 }
 
 .experience__skills > small {
-  @apply w-fit inline-block px-2 text-light bg-transparent
+  @apply w-fit inline-block px-2 text-light bg-transparent transition-ease
   border border-solid border-primary rounded-md hover:bg-primary hover:text-white;
 }
 

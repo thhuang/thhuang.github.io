@@ -10,7 +10,8 @@
 
 .contact__option {
   @apply p-5 rounded-xl text-center border-2 border-solid border-transparent
-  bg-background-varient hover:bg-transparent hover:border-background-varient
+  bg-background-varient transition-ease
+  hover:bg-transparent hover:border-background-varient
   sm:rounded-3xl;
 }
 
