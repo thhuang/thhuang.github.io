@@ -1,0 +1,27 @@
+.portfolio__container {
+  @apply grid grid-cols-3 gap-5
+  lg:grid-cols-[1fr_1fr] lg:gap-4
+  sm:grid-cols-[1fr] sm:gap-3;
+}
+
+.portfolio__item {
+  @apply bg-background-varient p-5
+  rounded-3xl border border-solid border-transparent transition-ease
+  hover:border-primary-varient hover:bg-transparent;
+}
+
+.portfolio__item-image {
+  @apply rounded-lg object-cover max-h-[8rem] overflow-hidden;
+}
+
+.portfolio__item-image img {
+  @apply min-h-[8rem] w-full;
+}
+
+.portfolio__item h3 {
+  @apply mt-2 mb-3;
+}
+
+.portfolio__item-cta {
+  @apply flex gap-4 mb-2;
+}

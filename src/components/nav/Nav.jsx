@@ -1,7 +1,7 @@
 import React from 'react';
 import './nav.css';
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
-import { BiBook, BiMessageSquareDetail } from 'react-icons/bi';
+import { BiBook, BiCodeBlock, BiMessageSquareDetail } from 'react-icons/bi';
 
 const Nav = () => {
   return (
@@ -14,6 +14,9 @@ const Nav = () => {
       </a>
       <a href="#experience">
         <BiBook />
+      </a>
+      <a href="#portfolio">
+        <BiCodeBlock />
       </a>
       <a href="#contact">
         <BiMessageSquareDetail />
