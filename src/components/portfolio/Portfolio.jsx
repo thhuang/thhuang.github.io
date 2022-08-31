@@ -30,7 +30,7 @@ const data = [
     id: 4,
     image: GoConcurrency,
     title: 'Go Concurrency for Everyone',
-    github: 'https://github.com/thhuang/algo4fun',
+    github: 'https://github.com/thhuang/GoConcurrencyForEveryone',
     demo: 'https://thhuang.dev/GoConcurrencyForEveryone',
   },
   {
