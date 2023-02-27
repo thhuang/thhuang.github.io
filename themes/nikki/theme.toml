@@ -1,0 +1,12 @@
+name = "Nikki"
+license = "MIT"
+licenselink = "https://github.com/thhuang/hugo-nikki/blob/master/LICENSE"
+description = "Hugo minimal dark theme made by developers, for developers"
+homepage = "https://github.com/thhuang/hugo-nikki/"
+tags = ["minimal", "dark", "blog"]
+features = ["blog", "dark"]
+min_version = "0.41.0"
+
+[author]
+  name = "TH Huang"
+  homepage = "https://thhuang.dev"
