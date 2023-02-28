@@ -1,7 +1,7 @@
 <header class="headerWrapper">
   <div class="header">
-    <div>
-      <span class="terminal">
+    <div class="terminal">
+      <span>
         <a href="{{ .Site.BaseURL }}">
           {{ .Site.Params.user }}@{{ .Site.Params.hostname }}</a
         >:~{{ strings.TrimRight "/" .Page.RelPermalink }}$
@@ -13,9 +13,7 @@
       <ul>
         {{ range .Site.Menus.header }}
         <li>
-          <a href="{{ .URL | absURL }}" title="{{ .Title }}">
-            ~/{{- .Name -}}
-          </a>
+          <a href="{{ .URL }}">~/{{- .Name -}}</a>
         </li>
         {{ end }}
       </ul>
