@@ -1,3 +1,1 @@
-| permalink                                     |
-| --------------------------------------------- |
-| [/index.html](https://thhuang.dev/index.html) |
+[thhuang.dev](https://thhuang.dev)
