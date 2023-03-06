@@ -1,8 +1,5 @@
-{{ define "title"}}
-  {{ .Title }} | {{ .Site.Params.author }}
-{{ end }}
-
-{{ define "main" }}
+{{ define "title"}} {{ .Title }} | {{ .Site.Params.author }} {{ end }} {{ define
+"main" }}
 
 <div>
   <div class="listHeader">
@@ -14,21 +11,31 @@
   {{ end }}
 
   <div>
-    {{ range .Pages }}
 
-    <a href="{{ .Permalink }}">
-      <div class="postListItem" role="listitem">
-        <div class="postHeader">
-          <span class="postTitle">{{ .Title }}</span>
-          <span class="postDate">{{ .Date.Format "January 2, 2006" }}</span>
-        </div>
-        <div class="postExcerpt">
-          <p>{{ .Summary }}</p>
-        </div>
+    {{ with .Pages }}
+
+      {{ range . }}
+        <a href="{{ .Permalink }}">
+          <div class="postListItem" role="listitem">
+            <div class="postHeader">
+              <span class="postTitle">{{ .Title }}</span>
+              <span class="postDate">{{ .Date.Format "January 2, 2006" }}</span>
+            </div>
+            <div class="postExcerpt">
+              <p>{{ .Summary }}</p>
+            </div>
+          </div>
+        </a>
+      {{ end }}
+
+    {{ else }}
+
+      <div class="listContentEmpty">
+        Oops, it looks like this page is feeling a little empty. Why not take a moment to reflect on the beauty of simplicity?
       </div>
-    </a>
 
-    {{end}}
+    {{ end }}
+
   </div>
 </div>
 
