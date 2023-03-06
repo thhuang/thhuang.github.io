@@ -4,7 +4,7 @@
       <span>
         <a href="{{ .Site.BaseURL }}">
           {{ .Site.Params.user }}@{{ .Site.Params.hostname }}</a
-        >:~{{ strings.TrimRight "/" .Page.RelPermalink }}$
+        >:~{{ strings.TrimRight "/" (strings.TrimRight ".html" .Page.RelPermalink) }}$
       </span>
     </div>
     <input class="side-menu" type="checkbox" id="side-menu" />
