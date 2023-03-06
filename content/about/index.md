@@ -1,10 +1,9 @@
 +++
 title = 'About'
 date = 2023-03-05
-draft = true
 +++
 
-Hello! My name is TH Huang; I am a Computer Science enthusiast.
+Hi there! I’m TH Huang, a computer science enthusiast who loves to explore the power and beauty of compilers and software engineering.
 
 ### Research
 
