@@ -78,8 +78,7 @@
 }
 
 .side-menu:checked ~ .headerLinks {
-  max-height: 15%;
-  border-width: 0 0 10px 0;
+  max-height: 30%;
 }
 .side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
@@ -100,9 +99,8 @@
     position: fixed;
     top: 60px;
     left: 0;
-    border: solid $backgroundDarker;
-    border-width: 0;
-    background-color: $backgroundDark;
+    background-image: linear-gradient(to top, $backgroundDark 0%, $backgroundDarker 100%);
+    opacity: 95%;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s ease-in-out, border-width 0.8s ease-out;
