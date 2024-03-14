@@ -1,18 +1,18 @@
 +++
 title = 'About'
-date = 2023-03-05
+date = 2024-03-13
 +++
 
-Hi there! I’m TH Huang, a computer science enthusiast who loves to explore the power and beauty of compilers and software engineering.
+Hi there! I'm TH Huang, a computer science aficionado blending the logical with the imaginative to navigate the thrilling landscape of software engineering. My professional journey transcends mere programming; it's about crafting experiences that resonate deeply and transform seamlessly, turning intricate challenges into smooth, intuitive solutions.
 
-### Research
+### What I Do
 
-Currently, I am pursuing a Master of Science degree in Computer Science at Northwestern University. With a deep interest in optimizing and parallelizing compilers, my passion lies in understanding the abstractions used within compilers and leveraging them to achieve broader optimization potential.
+As a Backend Engineer at Fetch, I'm at the forefront of developing robust software solutions that enhance the quality measurement of partner activity on our platform. This role taps into my extensive experience across various domains, including my time at Amazon and various innovative startups, where I've sharpened my skills in building everything from live-streaming platforms to autonomous drones.
 
-### Work
+### Academic Adventures
 
-Before my Master’s, I gained over four years of experience building successful production systems, including B2B/B2C products, web/mobile applications, and distributed/parallel systems. As a backend developer, I have a strong background in designing and implementing large-scale services, with expertise in Go and other modern programming languages.
+My adventure at Northwestern University wasn't just about snagging a Master's in Computer Science; it was my quest to unlock the secrets of optimizing and parallelizing compilers. Imagine me diving into the depths of code to unearth treasures that make everything run smoother, faster, and smarter. It was hardcore, but hey, so am I.
 
-### Collaboration
+### Let’s Team Up!
 
-I am excited about the potential of technology and look forward to collaborating with other talented professionals to push the boundaries of what’s possible.
+The fusion of technology and creative minds excites me deeply. I am constantly looking for opportunities to collaborate, embarking on this exhilarating journey to uncover the endless possibilities in the world of software engineering. Let's connect, innovate, and inspire the next wave of technological advancements together!
