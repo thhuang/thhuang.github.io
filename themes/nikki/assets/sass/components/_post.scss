@@ -34,6 +34,27 @@
   color: $white;
 }
 
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  .tag {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid $blue;
+    border-radius: 20px;
+    padding: 1.5px 6px;
+    font-size: 0.75rem;
+    transition: border 0.2s;
+
+    &:hover {
+      border: 1px solid $white;
+      color: white; // Change text color on hover for better visibility
+    }
+  }
+}
+
 .headerContainer {
   display: flex;
   justify-content: space-between;

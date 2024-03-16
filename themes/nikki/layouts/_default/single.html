@@ -1,10 +1,26 @@
-{{ define "title"}} {{ .Title }} | {{ .Site.Params.author }} {{ end }} {{ define
-"main" }}
+{{ define "title"}} {{ .Title }} | {{ .Site.Params.author }} {{ end }} {{ define "main" }}
 <div class="postWrapper">
   <h1>{{ .Title }}</h1>
   {{ if .Date }}
     <em>{{ .Date.Format "2 January 2006" }}</em>
   {{ end }}
   <div>{{ .Content }}</div>
+
+  <div class="foot">
+    <div class="tagList">
+      {{ range .Params.tags }}
+        <li class="tag"><a href="{{ `tags/` | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+      {{ end }}
+    </div>
+
+    <div class="navigation">
+      {{ if .Next }}
+        <div>Next article: <a href="{{ .Next.RelPermalink }}" class="next">{{ .Next.Title }}</a></div>
+      {{ end }}
+      {{ if .Prev }}
+        <div>Previous article: <a href="{{ .Prev.RelPermalink }}" class="prev">{{ .Prev.Title }}</a></div>
+      {{ end }}
+    </div>
+  </div>
 </div>
 {{ end }}

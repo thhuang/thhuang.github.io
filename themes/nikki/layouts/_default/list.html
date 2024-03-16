@@ -15,17 +15,24 @@
     {{ with .Pages }}
 
       {{ range . }}
-        <a href="{{ .Permalink }}">
-          <div class="postListItem" role="listitem">
+        <div class="postListItem" role="listitem">
+          <a href="{{ .Permalink }}">
             <div class="postHeader">
               <span class="postTitle">{{ .Title }}</span>
               <span class="postDate">{{ .Date.Format "January 2, 2006" }}</span>
             </div>
+
             <div class="postExcerpt">
               <p>{{ .Summary }}</p>
             </div>
+          </a>
+
+          <div class="tagList">
+            {{ range .Params.tags }}
+              <li class="tag"><a href="{{ `tags/` | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
           </div>
-        </a>
+        </div>
       {{ end }}
 
     {{ else }}
