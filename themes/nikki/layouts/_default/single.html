@@ -14,10 +14,10 @@
     </div>
 
     <div class="navigation">
-      {{ if .Next }}
+      {{ if and .Next (compare.Ne .Title "About") }}
         <div>Next article: <a href="{{ .Next.RelPermalink }}" class="next">{{ .Next.Title }}</a></div>
       {{ end }}
-      {{ if .Prev }}
+      {{ if and .Prev (compare.Ne .Prev.Title "About") }}
         <div>Previous article: <a href="{{ .Prev.RelPermalink }}" class="prev">{{ .Prev.Title }}</a></div>
       {{ end }}
     </div>
